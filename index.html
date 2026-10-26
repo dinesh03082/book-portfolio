@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Book Portfolio | Dinesh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="scene">
+    <p class="hint">Click Open Book, then use the arrows or keyboard ← →</p>
+    <section class="book" id="book" aria-label="Portfolio book">
+      <div class="page cover" id="cover">
+        <div class="cover-content">
+          <p class="eyebrow">MY PORTFOLIO</p>
+          <h1>Dinesh</h1>
+          <p>Student • Web Developer</p>
+          <button id="openBook">Open Book</button>
+        </div>
+      </div>
+      <div class="page inside" id="page1">
+        <span class="page-number">01</span>
+        <h2>About Me</h2>
+        <p>Hello! I am a student interested in web development and technology.</p>
+        <h3>Career Goal</h3>
+        <p>To build useful, accessible and responsive web applications.</p>
+        <div class="page-controls"><button class="prev" aria-label="Previous page">←</button><button class="next" aria-label="Next page">→</button></div>
+      </div>
+      <div class="page inside" id="page2">
+        <span class="page-number">02</span>
+        <h2>Education</h2>
+        <p><strong>Degree:</strong> mca/ course</p>
+        <p><strong>College:</strong> Your college name</p>
+        <p><strong>Skills:</strong> HTML, CSS, JavaScript, Python, Git</p>
+        <div class="page-controls"><button class="prev" aria-label="Previous page">←</button><button class="next" aria-label="Next page">→</button></div>
+      </div>
+      <div class="page inside" id="page3">
+        <span class="page-number">03</span>
+        <h2>My Project</h2>
+        <h3>Personal Finance Tracker</h3>
+        <p>A web application concept for recording income and expenses and viewing a simple summary.</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+        <div class="page-controls"><button class="prev" aria-label="Previous page">←</button><button class="next" aria-label="Next page">→</button></div>
+      </div>
+      <div class="page inside" id="page4">
+        <span class="page-number">04</span>
+        <h2>Contact</h2>
+        <p>Want to connect? Use the details below.</p>
+        <p><strong>Email:</strong> your.email@example.com</p>
+        <p><strong>GitHub:</strong> github.com/your-username</p>
+        <p class="thanks">Thank you for visiting!</p>
+        <div class="page-controls"><button class="prev" aria-label="Previous page">←</button><button class="next" aria-label="Next page">→</button></div>
+      </div>
+      <div class="page back-cover" id="backCover">
+        <div><p class="eyebrow">END OF PORTFOLIO</p><h2>Keep Learning.</h2></div>
+        <div class="page-controls"><button class="prev" aria-label="Previous page">←</button></div>
+      </div>
+    </section>
+    <p class="status" id="status">Book is closed</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

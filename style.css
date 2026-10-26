@@ -1,0 +1,39 @@
+* { box-sizing: border-box; }
+:root { --paper: #fffaf0; --ink: #24243b; --accent: #e7a84b; }
+body {
+  margin: 0; min-height: 100vh; font-family: Arial, sans-serif;
+  color: var(--ink); background: radial-gradient(circle at top, #35466f, #111827 70%);
+}
+.scene { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; overflow: hidden; }
+.hint, .status { color: #fff; text-align: center; }
+.hint { margin: 0 0 18px; }
+.book { position: relative; width: min(380px, 84vw); height: min(520px, 68vh); min-height: 390px; perspective: 1800px; }
+.page {
+  position: absolute; inset: 0; border-radius: 5px 14px 14px 5px;
+  background: var(--paper); padding: 38px 30px 72px; overflow: hidden;
+  box-shadow: 0 12px 28px #0005; transform-origin: left center;
+  transition: transform .9s ease, box-shadow .9s ease; backface-visibility: hidden;
+}
+.cover, .back-cover { background: linear-gradient(145deg, #203a68, #101a35); color: #fff; border: 4px solid #d8a34c; display: flex; align-items: center; justify-content: center; text-align: center; }
+.cover { z-index: 10; }
+.cover-content h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 12px 0; }
+.eyebrow { letter-spacing: 4px; color: #f4c879; font-size: .8rem; }
+button { border: 0; border-radius: 22px; padding: 11px 20px; cursor: pointer; font-weight: bold; }
+#openBook { margin-top: 24px; background: var(--accent); color: #18213a; }
+.inside { z-index: 1; }
+.inside h2 { margin-top: 15px; color: #253d6a; border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
+.inside h3 { color: #9b6320; }
+.inside p { line-height: 1.65; }
+.page-number { position: absolute; top: 15px; right: 20px; color: #888; font-size: .8rem; }
+.page-controls { position: absolute; bottom: 18px; left: 25px; right: 25px; display: flex; justify-content: space-between; }
+.page-controls button { background: #253d6a; color: white; min-width: 48px; }
+.back-cover { z-index: 0; }
+.thanks { margin-top: 34px; font-weight: bold; color: #9b6320; }
+.status { margin: 18px 0 0; font-size: .9rem; }
+.page.turned { transform: rotateY(-180deg); box-shadow: 0 4px 12px #0002; }
+.page[hidden] { display: none; }
+@media (max-width: 520px) {
+  .scene { padding: 12px; }
+  .book { width: min(340px, 90vw); height: min(490px, 65vh); min-height: 370px; }
+  .page { padding: 32px 22px 68px; }
+}
